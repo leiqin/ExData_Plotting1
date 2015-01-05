@@ -6,5 +6,8 @@ DF <- transform(DF, datetime = as.character(paste(Date, Time)))
 DF <- transform(DF, datetime = strptime(datetime, '%d/%m/%Y %H:%M:%S'))
 
 png(filename='plot1.png')
+
 hist(DF$Global_active_power, xlab='Global Active Power (kilowatts)',
 	 main='Global Active Power', col='red')
+
+dev.off()
