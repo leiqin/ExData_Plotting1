@@ -23,7 +23,8 @@ with(DF, plot(datetime, Sub_metering_1, type='l', col='black',
 with(DF, lines(datetime, Sub_metering_2, col='red'))
 with(DF, lines(datetime, Sub_metering_3, col='blue'))
 
-legend('topright', legend=paste('Sub_metering_', c(1, 2, 3), sep=''), col=c('black', 'red', 'blue'), lty=1)
+legend('topright', legend=paste('Sub_metering_', c(1, 2, 3), sep=''), col=c('black', 'red', 'blue'), lty=1, bty='n')
+# byt='n' hide the legend outline , thank you for my classmates
 
 # plot4
 with(DF, plot(datetime, Global_reactive_power, type='l', main=''))
